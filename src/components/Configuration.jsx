@@ -10,17 +10,19 @@ import { useAppContext } from './AppContext';
 import { useEffect } from 'react';
 
 const Configuration = () => {
+	// Extracting values from the AppContext
 	const { nicheDepth, setNicheDepth, setSelectedMount, setSelectedMediaPlayer, setSelectedReceptacleBox, setNiche, niche, setNicheGap, orientation, setOrientation, setSelectedScreen, setJsonData, jsonData, floorHeight, setFloorHeight, nicheGap } =
 		useAppContext();
 
+	// Fetch and parse the XLSX file
 	useEffect(() => {
 		const fetchXlsx = async () => {
 			try {
-				// Fetch the Excel file
 				const response = await fetch('/data.xlsx');
 				const arrayBuffer = await response.arrayBuffer();
 				const workbook = XLSX.read(arrayBuffer, { type: 'array' });
-				// Extract data from all worksheets
+
+				// Store data from all sheets
 				const sheetData = {};
 				workbook.SheetNames.forEach((sheetName) => {
 					const worksheet = workbook.Sheets[sheetName];
@@ -35,50 +37,42 @@ const Configuration = () => {
 		fetchXlsx();
 	}, [setJsonData]);
 
+	// Handle selection change for Screen
 	const handleSelectChangeForScreen = (value) => {
-		// the first sheet is for Screen
 		const firstSheet = Object.keys(jsonData)[0];
 		const selectedScreen = jsonData[firstSheet]?.find((item) => item['Screen MFR'] === value);
-		if (Number(selectedScreen['Screen Size']) >= 55) {
-			setNicheGap(2);
-		} else {
-			setNicheGap(1.5);
-		}
+		setNicheGap(Number(selectedScreen['Screen Size']) >= 55 ? 2 : 1.5);
 		setSelectedScreen(selectedScreen);
 	};
+
+	// Handle selection change for media player
 	const handleSelectChangeForMediaPlayer = (value) => {
-		// the second sheet is for Media Player
 		const secondSheet = Object.keys(jsonData)[1];
 		const selectedMediaPlayer = jsonData[secondSheet]?.find((item) => item['MFG. PART'] === value);
 		setSelectedMediaPlayer(selectedMediaPlayer);
 	};
+	
+	// Handle selection change for mount
 	const handleSelectChangeForMount = (value) => {
-		// the third sheet is for Mount
 		const thirdSheet = Object.keys(jsonData)[2];
 		const selectedMount = jsonData[thirdSheet]?.find((item) => item['MFG. PART'] === value);
 		setSelectedMount(selectedMount);
 	};
-
+	
+	// Handle selection change for receptacle box
 	const handleSelectChangeForReceptacleBox = (value) => {
-		// the fourth sheet is for Receptacle Box
 		const fourthSheet = Object.keys(jsonData)[3];
 		const selectedReceptacleBox = jsonData[fourthSheet]?.find((item) => item['MFG. PART'] === value);
 		setSelectedReceptacleBox(selectedReceptacleBox);
 	};
 
+	// Handle changes for orientation 
 	const handelOrientationChange = (value) => {
-		console.log(value);
-		if (value === '') {
-			return;
-		}
-		setOrientation(value);
+		if (value) setOrientation(value);
 	};
+	// Handle changes for niche/flatwall toggle
 	const handelNicheChange = (value) => {
-		if (value === 'flatwall') {
-			setNiche(false);
-		} else {
-			setNiche(true);
-		}
+		setNiche(value === 'niche');
 	};
 
 	return (
@@ -94,6 +88,8 @@ const Configuration = () => {
 					</>
 				)}
 				<Separator className='my-2' />
+				
+				{/* Orientation toggle */}
 				<ToggleGroup variant='outline' type='single' defaultValue={orientation} onValueChange={handelOrientationChange}>
 					<ToggleGroupItem disabled={orientation === 'vertical'} value='vertical' className={`w-1/2 ${orientation === 'vertical' ? 'bg-slate-800 text-white' : ''}`}>
 						Vertical
@@ -103,6 +99,7 @@ const Configuration = () => {
 					</ToggleGroupItem>
 				</ToggleGroup>
 
+				{/* Niche/Flatwall toggle */}
 				<ToggleGroup className='mt-2' variant='outline' type='single' defaultValue='niche' onValueChange={handelNicheChange}>
 					<ToggleGroupItem disabled={niche} value='niche' className='w-1/2'>
 						Niche
@@ -111,7 +108,10 @@ const Configuration = () => {
 						Flat Wall
 					</ToggleGroupItem>
 				</ToggleGroup>
+				
 				<Separator className='my-2' />
+
+				{/* Input fields for Floor Distance, Niche Gap, and Niche Depth */}
 				<div className='flex items-center justify-between mb-3'>
 					<label className='text-gray-600 text-xs '>Floor Distance</label>
 					<Input className='ml-3 w-[80px]' type='number' min='0' value={floorHeight} onChange={(e) => setFloorHeight(Number(e.target.value))} />
