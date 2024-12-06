@@ -56,7 +56,7 @@ LED Screen Installation Tool is a user-friendly, web-based application that gene
 
 ## 🚀 Technologies Used
 
-- **Frontend**: React (setup by vite), TailwindCSS, Shadcn UI
+- **Frontend**: `React` (setup by vite), `TailwindCSS`, `Shadcn UI`
   - [Vite](https://vite.dev/guide/)
   - [TailwindCSS Documentation](https://v2.tailwindcss.com/docs)
   - [Shadcn UI Documentation](https://ui.shadcn.com/docs)
