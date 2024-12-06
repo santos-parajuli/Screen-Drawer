@@ -1,3 +1,4 @@
+// This file is provided by the documentation of Shadcn UI
 import { createContext, useContext, useEffect, useState } from 'react';
 
 const ThemeProviderContext = createContext({
