@@ -114,7 +114,7 @@ For questions or suggestions, feel free to reach out to santosh.parajuli255@gmai
 
 ## 📜 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [License](LICENSE).
 
 ---
 
