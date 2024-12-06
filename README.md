@@ -49,6 +49,7 @@ LED Screen Installation Tool is a user-friendly, web-based application that gene
 
 - **Web Accessibility**: The application is fully compliant with accessibility standards, ensuring usability for all users.
 - **Responsive Design**: Works seamlessly across devices, including desktops, tablets, and mobile phones.
+- - **Light and Dark Mode**: The entire website supports both dark and light modes, allowing users to switch based on their preference or system settings.
 - **Live Application**: Hosted and accessible at [https://signcast.siwani.com.np/](https://signcast.siwani.com.np/).
 
 ---
@@ -56,6 +57,8 @@ LED Screen Installation Tool is a user-friendly, web-based application that gene
 ## 🚀 Technologies Used
 
 - **Frontend**: React, TailwindCSS, Shadcn UI
+  - [TailwindCSS Documentation](https://v2.tailwindcss.com/docs)
+  - [Shadcn UI Documentation](https://ui.shadcn.com/docs)
 - **PDF Generation**: `jspdf` and `canvg`
 - **Spreadsheet Parsing**: `xlsx` library for populating dropdowns with data from a CSV file.
 
