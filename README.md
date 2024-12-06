@@ -67,18 +67,22 @@ LED Screen Installation Tool is a user-friendly, web-based application that gene
 ```bash
 git clone https://github.com/your-username/signcast.git
 cd signcast
+```
 
 ### Install Dependencies
 ```bash
 npm install
+```
 
 ### Run the Development Server
 ```bash
 npm run dev
+```
 
 ### Build for production
 ```bash
 npm run build
+```
 
 ## 🧑‍💻 How It Works
 
@@ -110,7 +114,7 @@ Contributions are welcome! If you have ideas for new features or improvements:
 
 ## 📧 Contact
 
-For questions or suggestions, feel free to reach out to [your email/contact info].
+For questions or suggestions, feel free to reach out to santosh.parajuli255@gmail.com.
 
 ---
 
@@ -120,5 +124,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Enjoy using SignCast and revolutionize your LED installation planning!
+Enjoy using LED Screen Installation Tool and revolutionize your LED installation planning!
 
