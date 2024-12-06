@@ -102,16 +102,6 @@ npm run build
 
 ---
 
-## 📝 Contributing
-
-Contributions are welcome! If you have ideas for new features or improvements:
-1. Fork the repository.
-2. Create a new branch (`feature/your-feature`).
-3. Commit your changes.
-4. Submit a pull request.
-
----
-
 ## 📧 Contact
 
 For questions or suggestions, feel free to reach out to santosh.parajuli255@gmail.com.
