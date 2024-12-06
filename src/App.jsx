@@ -1,3 +1,4 @@
+// I have tried to make the app as modular as possible. All the cards in the hompag is it's own componnt which will make it easier to keep track and debug.
 import Configuration from './components/Configuration';
 import Diagram from './components/Diagram';
 import DownloadButton from './components/DownloadButton';
@@ -21,6 +22,7 @@ const App = () => {
 				{selectedScreen && (
 					<div className='flex flex-col col-span-1 md:col-span-3 lg:col-span-3 gap-2'>
 						<div className=' gap-1 flex justify-evenly'>
+							{* Condotionally rendering Niche Dimension information. It is only shown for Niche and not for Flat wall*}
 							{niche && <NicheDimenInfo />}
 							<ScreenDimenInfo />
 						</div>
