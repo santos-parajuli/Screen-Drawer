@@ -28,6 +28,7 @@ LED Screen Installation Tool is a user-friendly, web-based application that gene
 - Toggle between **horizontal** and **vertical** screen orientations.
 - Select installation type: **Niche** (recessed) or **Flat Wall**.
 - Adjust the **niche depth** based on user inputs.
+- Adjust the **niche gap** based on user inputs.
 - Input field to specify the distance from floor to screen center.
 
 ### Project Information
@@ -54,8 +55,7 @@ LED Screen Installation Tool is a user-friendly, web-based application that gene
 
 ## 🚀 Technologies Used
 
-- **Frontend**: React, TailwindCSS, Radix UI
-- **Backend**: *(Optional, specify if you used any backend services)*
+- **Frontend**: React, TailwindCSS, Shadcn UI
 - **PDF Generation**: `jspdf` and `canvg`
 - **Spreadsheet Parsing**: `xlsx` library for populating dropdowns with data from a CSV file.
 
