@@ -67,3 +67,58 @@ LED Screen Installation Tool is a user-friendly, web-based application that gene
 ```bash
 git clone https://github.com/your-username/signcast.git
 cd signcast
+
+### Install Dependencies
+```bash
+npm install
+
+### Run the Development Server
+```bash
+npm run dev
+
+### Build for production
+```bash
+npm run build
+
+## 🧑‍💻 How It Works
+
+- **Equipment Data**: Load options for dropdowns from a CSV file using the `xlsx` library.
+- **Dynamic Diagrams**: Drawings dynamically adjust based on user input, reflecting accurate measurements and configurations.
+- **PDF Export**: Use `jspdf` and `canvg` to convert SVG diagrams to downloadable PDF files.
+
+---
+
+## 📋 Success Criteria
+
+- **Real-Time Updates**: Diagrams update dynamically as users make changes.
+- **Accuracy**: All measurements are precise and configurable.
+- **Usability**: Intuitive and easy-to-use interface.
+- **Responsiveness**: Works flawlessly on all device types.
+- **Accessibility**: Fully supports screen readers and keyboard navigation.
+
+---
+
+## 📝 Contributing
+
+Contributions are welcome! If you have ideas for new features or improvements:
+1. Fork the repository.
+2. Create a new branch (`feature/your-feature`).
+3. Commit your changes.
+4. Submit a pull request.
+
+---
+
+## 📧 Contact
+
+For questions or suggestions, feel free to reach out to [your email/contact info].
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Enjoy using SignCast and revolutionize your LED installation planning!
+
