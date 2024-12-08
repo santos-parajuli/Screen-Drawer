@@ -1,5 +1,3 @@
-// I have used Signcast logo. No copyright infingement !! 
-// There is a light and dark mode in the app.
 import { ModeToggle } from './ui/mode-toggle';
 
 function Navbar() {

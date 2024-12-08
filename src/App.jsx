@@ -5,6 +5,7 @@ import DownloadButton from './components/DownloadButton';
 import Navbar from './components/Navbar';
 import { NicheDimenInfo } from './components/NicheDimenInfo';
 import ProjectInfo from './components/ProjectInfo';
+import ProjectInfoBox from './components/ProjectInfoBox';
 import ReceptacleBoxInfo from './components/ReceptacleBoxInfo';
 import { ScreenDimenInfo } from './components/ScreenDimenInfo';
 import { useAppContext } from './components/AppContext';
@@ -22,11 +23,12 @@ const App = () => {
 				{selectedScreen && (
 					<div className='flex flex-col col-span-1 md:col-span-3 lg:col-span-3 gap-2'>
 						<div className=' gap-1 flex justify-evenly'>
-							{* Condotionally rendering Niche Dimension information. It is only shown for Niche and not for Flat wall*}
+							{/*  Condotionally rendering Niche Dimension information. It is only shown for Niche and not for Flat wall */}
 							{niche && <NicheDimenInfo />}
 							<ScreenDimenInfo />
 						</div>
 						<ReceptacleBoxInfo />
+						<ProjectInfoBox />
 						<DownloadButton />
 					</div>
 				)}

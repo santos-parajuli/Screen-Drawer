@@ -51,14 +51,14 @@ const Configuration = () => {
 		const selectedMediaPlayer = jsonData[secondSheet]?.find((item) => item['MFG. PART'] === value);
 		setSelectedMediaPlayer(selectedMediaPlayer);
 	};
-	
+
 	// Handle selection change for mount
 	const handleSelectChangeForMount = (value) => {
 		const thirdSheet = Object.keys(jsonData)[2];
 		const selectedMount = jsonData[thirdSheet]?.find((item) => item['MFG. PART'] === value);
 		setSelectedMount(selectedMount);
 	};
-	
+
 	// Handle selection change for receptacle box
 	const handleSelectChangeForReceptacleBox = (value) => {
 		const fourthSheet = Object.keys(jsonData)[3];
@@ -66,7 +66,7 @@ const Configuration = () => {
 		setSelectedReceptacleBox(selectedReceptacleBox);
 	};
 
-	// Handle changes for orientation 
+	// Handle changes for orientation
 	const handelOrientationChange = (value) => {
 		if (value) setOrientation(value);
 	};
@@ -88,7 +88,7 @@ const Configuration = () => {
 					</>
 				)}
 				<Separator className='my-2' />
-				
+
 				{/* Orientation toggle */}
 				<ToggleGroup variant='outline' type='single' defaultValue={orientation} onValueChange={handelOrientationChange}>
 					<ToggleGroupItem disabled={orientation === 'vertical'} value='vertical' className={`w-1/2 ${orientation === 'vertical' ? 'bg-slate-800 text-white' : ''}`}>
@@ -108,7 +108,7 @@ const Configuration = () => {
 						Flat Wall
 					</ToggleGroupItem>
 				</ToggleGroup>
-				
+
 				<Separator className='my-2' />
 
 				{/* Input fields for Floor Distance, Niche Gap, and Niche Depth */}
