@@ -125,5 +125,3 @@ For questions or suggestions, feel free to reach out to santosh.parajuli255@gmai
 This project is licensed under the [License](LICENSE).
 
 ---
-
-Enjoy using LED Screen Installation Tool and revolutionize your LED installation planning!
